@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cypress/included:3.2.0
+    steps:
+     - run: 
+       name: cypress run 
+       command:  cypress run --spec 'cypress/integration/e2e_tests/*' --browser chrome
+
+workflows: 
