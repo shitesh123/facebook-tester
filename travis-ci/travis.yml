@@ -1,6 +1,13 @@
 language: node_js
-node_js: 
+
+node_js:
   - "stable"
+
+  addons:
+    chrome: stable
+    apt:
+     packages:
+     - libgconf-2-4
 
 install:
   - npm ci
