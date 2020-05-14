@@ -10,7 +10,7 @@ addons:
       - libgconf-2-4
 
 install:
-  - npm ci
+  - npm i
 
 before_script:
   - npm start -- --silent &
