@@ -10,15 +10,15 @@ addons:
       - libgconf-2-4
 
 install:
-  - npm install
+  - npm ci
 
-before_script:
-  - npm start -- --silent &
+# before_script:
+#   - npm start -- --silent &
 
 script:
    #   ## print all Travis environment variables for debugging
     # - $(npm bin)/print-env TRAVIS
-    - npm run start:ci & cy:run --browser chrome
+    - $(npm bin)/cypress run --record
     # - npm run cy:run -- --record --parallel --group $STAGE_NAME
     # after all tests finish running we need
     # to kill all background jobs (like "npm start &")
